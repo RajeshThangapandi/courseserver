@@ -1,0 +1,11 @@
+version: '3'
+services:
+  frontend:
+    image: rajeshdockerapp678/courseclient:latest  
+    ports:
+      - "3000:80"  
+
+  backend:
+    image: rajeshdockerapp678/courseserver:latest  
+    ports:
+      - "8000:8000"
