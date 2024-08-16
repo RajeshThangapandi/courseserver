@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -131,7 +133,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
     "https://ascclient-rajeshs-projects-65e14dfb.vercel.app/",
 ]
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:3000','https://ascclient-rajeshs-projects-65e14dfb.vercel.app/']
+ALLOWED_HOSTS = ['0.0.0.0','localhost', '127.0.0.1', 'localhost:3000','https://ascclient-rajeshs-projects-65e14dfb.vercel.app/']
 
